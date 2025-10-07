@@ -1,0 +1,13 @@
+{
+  "itemGroup.psychologicalascent": "Example Mod Tab",
+  "block.psychologicalascent.example_block": "Example Block",
+  "item.psychologicalascent.example_item": "Example Item",
+
+  "psychologicalascent.configuration.title": "Psychological Ascent Configs",
+  "psychologicalascent.configuration.section.psychologicalascent.common.toml": "Psychological Ascent Configs",
+  "psychologicalascent.configuration.section.psychologicalascent.common.toml.title": "Psychological Ascent Configs",
+  "psychologicalascent.configuration.items": "Item List",
+  "psychologicalascent.configuration.logDirtBlock": "Log Dirt Block",
+  "psychologicalascent.configuration.magicNumberIntroduction": "Magic Number Text",
+  "psychologicalascent.configuration.magicNumber": "Magic Number"
+}
