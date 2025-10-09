@@ -3,9 +3,15 @@
   "block.psychologicalascent.example_block": "Example Block",
   "item.psychologicalascent.example_item": "Example Item",
 
+<<<<<<< HEAD
   "psychologicalascent.configuration.title": "Psychological Ascent Configs",
   "psychologicalascent.configuration.section.psychologicalascent.common.toml": "Psychological Ascent Configs",
   "psychologicalascent.configuration.section.psychologicalascent.common.toml.title": "Psychological Ascent Configs",
+=======
+  "psychologicalascent.configuration.title": "Psychological-Ascent Configs",
+  "psychologicalascent.configuration.section.psychologicalascent.common.toml": "Psychological-Ascent Configs",
+  "psychologicalascent.configuration.section.psychologicalascent.common.toml.title": "Psychological-Ascent Configs",
+>>>>>>> 0b35fbfea9be695c7c2fa32d0d6564773a7380b9
   "psychologicalascent.configuration.items": "Item List",
   "psychologicalascent.configuration.logDirtBlock": "Log Dirt Block",
   "psychologicalascent.configuration.magicNumberIntroduction": "Magic Number Text",

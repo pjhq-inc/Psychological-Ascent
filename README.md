@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 
 Installation information
 =======
@@ -23,3 +24,6 @@ Additional Resources:
 ==========
 Community Documentation: https://docs.neoforged.net/  
 NeoForged Discord: https://discord.neoforged.net/
+=======
+pj ascent
+>>>>>>> 0b35fbfea9be695c7c2fa32d0d6564773a7380b9
