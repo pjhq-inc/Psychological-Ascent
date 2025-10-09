@@ -1,4 +1,4 @@
-package com.example.pjascent;
+package com.pjhq.psychologicalascent;
 
 import org.slf4j.Logger;
 

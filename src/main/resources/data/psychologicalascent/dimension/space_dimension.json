@@ -1,0 +1,10 @@
+{
+  "type": "psychologicalascent:space_dimension",
+  "generator": {
+    "type": "minecraft:flat",
+    "settings": {
+      "layers": [],
+      "structure_overrides": []
+    }
+  }
+}

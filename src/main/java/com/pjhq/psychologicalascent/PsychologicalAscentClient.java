@@ -1,4 +1,4 @@
-package com.example.pjascent;
+package com.pjhq.psychologicalascent;
 
 import net.minecraft.client.Minecraft;
 import net.neoforged.api.distmarker.Dist;
