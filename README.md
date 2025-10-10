@@ -2,3 +2,5 @@
 
 <p2 style="text-align:center;">1.21.5+ Space mod </p2>
 
+[Official PJHQ site](https://pjhq.dev/)
+
