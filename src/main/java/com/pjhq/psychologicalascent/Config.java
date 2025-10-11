@@ -26,6 +26,22 @@ public class Config {
             .comment("A list of items to log on common setup.")
             .defineListAllowEmpty("items", List.of("minecraft:iron_ingot"), () -> "", Config::validateItemName);
 
+    public static final ModConfigSpec.IntValue OVERWORLD_BASE_PRESSURE = BUILDER
+            .comment("Base pressure for overworld at sea level (in kPa)")
+            .defineInRange("overworldBasePressure", 100, 0, 1000);
+
+    public static final ModConfigSpec.IntValue SPACE_BASE_PRESSURE = BUILDER
+            .comment("Base pressure for space dimension (in kPa)")
+            .defineInRange("spaceBasePressure", 0, 0, 1000);
+
+    public static final ModConfigSpec.IntValue NETHER_BASE_PRESSURE = BUILDER
+            .comment("Base pressure for nether (in kPa)")
+            .defineInRange("netherBasePressure", 100, 0, 1000);
+
+    public static final ModConfigSpec.IntValue END_BASE_PRESSURE = BUILDER
+            .comment("Base pressure for end (in kPa)")
+            .defineInRange("endBasePressure", 50, 0, 1000);
+
     static final ModConfigSpec SPEC = BUILDER.build();
 
     private static boolean validateItemName(final Object obj) {

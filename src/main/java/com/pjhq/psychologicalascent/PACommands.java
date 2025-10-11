@@ -8,7 +8,7 @@ import net.minecraft.commands.Commands;
 import net.minecraft.network.chat.Component;
 import net.minecraft.server.level.ServerPlayer;
 
-public class OxygenCommand { //this is temp until i add a bar coz i couldnt find any fitting graphics
+public class PACommands { //this is temp until i add a bar coz i couldnt find any fitting graphics
     public static void register(CommandDispatcher<CommandSourceStack> dispatcher) {
         dispatcher.register(Commands.literal("oxygen")
             .requires(source -> source.hasPermission(2))
@@ -31,8 +31,16 @@ public class OxygenCommand { //this is temp until i add a bar coz i couldnt find
             .then(Commands.literal("deplete").executes(context -> depleteOxygen(context, context.getSource().getPlayerOrException()))
             )
         );
-    }
 
+        dispatcher.register(Commands.literal("pressure")
+            .requires(source -> source.hasPermission(2))
+            .then(Commands.literal("get")
+                .executes(context -> getPressure(context, context.getSource().getPlayerOrException()))
+            )
+        );
+    }
+    
+    //oxygen cmds
     private static int getOxygen(CommandContext<CommandSourceStack> context, ServerPlayer player) {
         int oxygen = player.getData(OxygenData.OXYGEN);
         context.getSource().sendSuccess(() -> 
@@ -60,5 +68,13 @@ public class OxygenCommand { //this is temp until i add a bar coz i couldnt find
         setOxygen(context, player, 0);
         context.getSource().sendSuccess(() -> Component.literal("Oxygen depleted!"), true);
         return 0;
+    }
+
+    //pressure cmd
+    private static int getPressure(CommandContext<CommandSourceStack> context, ServerPlayer player) {
+        int pressure = player.getData(PressureData.PRESSURE);
+        context.getSource().sendSuccess(() -> 
+            Component.literal("Pressure level: " + pressure + " kPa"), false);
+        return pressure;
     }
 }

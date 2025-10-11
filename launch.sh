@@ -14,7 +14,7 @@ task launch {
 
         if (isServer) {
             println "Launching server..."
-            if (System.properties['os.name'].toLowerCase().contains('windows')) {
+            if (System.properties['os.name'].toLowerCase().contains('windows')) { # why does this shit not work man
                 exec {
                     commandLine 'cmd', '/c', 'gradlew.bat', 'runServer'
                 }

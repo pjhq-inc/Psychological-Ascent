@@ -16,7 +16,6 @@ import net.minecraft.world.level.block.Block;
 import net.minecraft.world.level.block.Blocks;
 import net.minecraft.world.level.block.state.BlockBehaviour;
 import net.minecraft.world.level.material.MapColor;
-import net.neoforged.api.distmarker.Dist;
 import net.neoforged.bus.api.IEventBus;
 import net.neoforged.bus.api.SubscribeEvent;
 import net.neoforged.fml.common.Mod;
@@ -77,6 +76,7 @@ public class PsychologicalAscent {
         // Register the Deferred Register to the mod event bus so tabs get registered
         CREATIVE_MODE_TABS.register(modEventBus);
         OxygenData.ATTACHMENT_TYPES.register(modEventBus);
+        PressureData.ATTACHMENT_TYPES.register(modEventBus);
 
         // Register ourselves for server and other game events we are interested in.
         // Note that this is necessary if and only if we want *this* class (PsychologicalAscent) to respond directly to events.
@@ -119,6 +119,6 @@ public class PsychologicalAscent {
 
     @SubscribeEvent
     public void onRegisterCommands(RegisterCommandsEvent event) {
-        OxygenCommand.register(event.getDispatcher());
+        PACommands.register(event.getDispatcher());
     }
 }
