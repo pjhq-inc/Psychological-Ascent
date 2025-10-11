@@ -29,12 +29,8 @@ public class OxygenCommand { //this is temp until i add a bar coz i couldnt find
                         context.getSource().getPlayerOrException(),
                         IntegerArgumentType.getInteger(context, "amount")
                     ))))
-            .then(Commands.literal("deplete")
-                .executes(context -> depleteOxygen(
-                    context,
-                    context.getSource().getPlayerOrException(),
-            ))))
-        );
+            .then(Commands.literal("deplete").executes(context -> depleteOxygen(context, context.getSource().getPlayerOrException()))
+            );
     }
 
     private static int getOxygen(CommandContext<CommandSourceStack> context, ServerPlayer player) {
@@ -61,7 +57,8 @@ public class OxygenCommand { //this is temp until i add a bar coz i couldnt find
     }
 
     private static int depleteOxygen(CommandContext<CommandSourceStack> context, ServerPlayer player) {
-        setOxygen(context, player, 0) 
-        return amount;
+        setOxygen(context, player, 0);
+        context.getSource().sendSuccess(() -> Component.literal("Oxygen depleted!"), true);
+        return 0;
     }
 }
